@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Candy Store</title>
+    <link rel="stylesheet" href="css/candy.css">
+    <link rel="stylesheet" src="css/jquery-ui.css">
+
+
+    <link rel="stylesheet" href="css/dist/css/basicResponsiveMenu.css">
+    <script src="css/dist/js/basicResponsiveMenu.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+ 
+    <!-- selectmenu widget  -->
+  <script>
+      $("#select").selectmenu({
+                icons: { button: "ui-icon-arrowthick-1-s" }
+            }) .selectmenu("menuWidget")
+  </script>
+
+ </head>
+<body>
+
+    <nav class="response--main-navigation">
+        <ul class="response--site-menu">
+          
+          <li><a class="nav" href="home.html">home</a></li>
+          <li><a class="nav" href="about.html">about</a></li>
+          <li><a class="nav" href="services.html">services</a></li>
+          <li><a class="nav" href="contact.html">contact</a></li>
+        </ul>
+          </nav>
+          
+
+          <!-- simple menu widget -->
+          <script>
+              $(function(){
+                $('.response--main-navigation').basicResponsiveMenu({ 
+                  slideSpeed:400
+                });
+            });
+       </script>
+       <br><br>
+  
+  <h1><span style="background-color: #fff5f5">&nbsp;services&nbsp;</span></h1>
+  
+  <div class="services">
+    <form>
+      <label>Chocolate <span id="price">($75c)</span>:</label>
+      <select id="one">
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+      </select><br>
+      
+      
+      <label>Salt Water Taffy <span id="price">($15c)</span>:</label>
+      <select id="two">
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+      </select><br>
+
+      
+      <label>Lollipop <span id="price">($10c)</span>:</label>
+      <select id="three">
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option>8</option>
+          <option>9</option>
+          <option>10</option>
+      </select><br>
+
+<!-- clicking button triggers sum function -->
+<button type="button" id="sum">Calculate</button>
+
+<!-- output field -->
+<p id="left">Total: <br>
+  <input type="button"  id="total" readonly="readonly" style="color:#707070; font-size:2em"  /></p>
+  
+<!-- sum function -->
+  <script>$("#sum").click(function (e) {
+    
+    // store values selected in variables
+    var one = ($("#one").val());
+    var two = ($("#two").val());
+    var three = ($("#three").val());
+    
+    //calculation with harded coded prices
+    var result = ((parseFloat(one)* 0.75 + parseFloat(two)* 0.15 + parseFloat(three)* 0.10).toFixed(2));
+    
+    //print result to total
+    $('#total').val("$" + result);
+    
+    });
+  </script>
+  </form>
+
+  <span id="price">* prices per unit.</span><br>
+  
+  <p id="right">
+    <a href="form-success.html" class="button">
+      CHECKOUT</a></p>
+
+</div>
+                 
+<!-- footer/validator -->
+      <footer id="right">
+          <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fcferraz.000webhostapp.com%2Fweb150%2Ffp%2Fservices.html" title="W3C-Validated">w3c</a>
+      </footer>
+
+</body>
+</html>
