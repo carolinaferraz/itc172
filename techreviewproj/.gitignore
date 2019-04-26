@@ -4,3 +4,4 @@ server.js
 .DS_Store
 __pycache__
 techreviewproj/techapp/__pycache__
+techreviewproj/techreviewproj/__pycache__
