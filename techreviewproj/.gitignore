@@ -2,3 +2,5 @@
 trp
 server.js
 .DS_Store
+__pycache__
+techreviewproj/techapp/__pycache__
