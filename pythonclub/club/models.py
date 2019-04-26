@@ -1,14 +1,3 @@
-# Create model classes for the python club database. These should include:
-
-# Meeting which will have fields for meeting title, meeting date, meeting time, location, Agenda
-
-# Meeting Minutes which will have fields for meeting id (a foreign key), attendance (a many to many field with User), Minutes text
-
-# Resource which will have fields for resource name, resource type, URL, date entered, user id (foreign key with User), and description
-
-# Event which will have fields for event title, location, date, time, description and the user id of the member that posted it
-
-
 from django.db import models
 from django.contrib.auth.models import User
 
