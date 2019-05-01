@@ -50,7 +50,6 @@ class Resource(models.Model):
 
 class Event(models.Model):
     eventtitle=models.CharField(max_length=255)
-    resourcetype=models.CharField(max_length=255)
     url=models.URLField()
     dateentered=models.DateField()
     userid=models.ManyToManyField(User)
