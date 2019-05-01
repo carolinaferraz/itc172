@@ -5,6 +5,7 @@ server.js
 __pycache__
 techreviewproj/techapp/__pycache__
 techreviewproj/techreviewproj/__pycache__
+<<<<<<< HEAD
 pythonclub/club/__pycache__/__init__.cpython-37.pyc
 pythonclub/club/__pycache__/admin.cpython-37.pyc
 pythonclub/club/__pycache__/models.cpython-37.pyc
@@ -23,3 +24,7 @@ techreviewproj/techreviewproj/__pycache__/__init__.cpython-37.pyc
 techreviewproj/techreviewproj/__pycache__/settings.cpython-37.pyc
 techreviewproj/techreviewproj/__pycache__/urls.cpython-37.pyc
 techreviewproj/techreviewproj/__pycache__/wsgi.cpython-37.pyc
+=======
+pythonclub/pythonclub/__pycache__
+pythonclub/club/__pycache__
+>>>>>>> 0d0b75fe97568dd1694e20f13edb84e394fbc8c6
