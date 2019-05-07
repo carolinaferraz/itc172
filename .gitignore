@@ -11,3 +11,10 @@ techreviewproj/db.sqlite3
 techreviewproj/techapp/__pycache__/
 techreviewproj/techreviewproj/__pycache__/
 pythonclub/club/__pycache__
+01
+py-env/bin
+py-env/lib
+py-env/include
+pgAdmin 4
+Postgres
+.vscode/settings.json
