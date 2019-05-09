@@ -3,8 +3,6 @@ from django.contrib.auth.models import User
 
 
 # Create your models here.
-#------------------------------------------------
-# TECHAPP CODE FOR REFERENCE
 
 class Meeting(models.Model):
     meetingtitle=models.CharField(max_length=255)
@@ -26,7 +24,7 @@ class MeetingMinutes(models.Model):
     minutestext=models.CharField(max_length=255)
 
     def __str__(self):
-        return self.meetingminutes
+        return self.minutestext
     
     class Meta:
         db_table='meetingminutes'
