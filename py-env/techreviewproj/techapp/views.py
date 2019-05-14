@@ -1,5 +1,6 @@
 from django.shortcuts import *
 from .models import ProductType, Product, Review
+from .forms import ProductForm, ReviewForm
 
 # Create your views here.
 def index (request):
@@ -23,3 +24,27 @@ def productdetails(request, id):
         'reviews' : reviews,
     }
     return render(request, 'techapp/productdetails.html', context=context)
+
+def newproduct(request):
+    form=ProductForm
+    if request.method=='POST':
+          form=ProductForm(request.POST)
+          if form.is_valid():
+               post=form.save(commit=True)
+               post.save()
+               form=ProductForm()
+    else:
+          form=ProductForm()
+    return render(request, 'techapp/newproduct.html', {'form': form})
+
+def newreview(request):
+    form=ReviewForm
+    if request.method=='POST':
+          form=ReviewForm(request.POST)
+          if form.is_valid():
+               post=form.save(commit=True)
+               post.save()
+               form=ReviewForm()
+    else:
+          form=ReviewForm()
+    return render(request, 'techapp/newreview.html', {'form': form})
