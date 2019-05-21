@@ -1,6 +1,7 @@
-from django.shortcuts import *
+from django.shortcuts import render,get_object_or_404 
 from .models import ProductType, Product, Review
 from .forms import ProductForm, ReviewForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index (request):
@@ -25,6 +26,7 @@ def productdetails(request, id):
     }
     return render(request, 'techapp/productdetails.html', context=context)
 
+@login_required
 def newproduct(request):
     form=ProductForm
     if request.method=='POST':
@@ -37,6 +39,7 @@ def newproduct(request):
           form=ProductForm()
     return render(request, 'techapp/newproduct.html', {'form': form})
 
+@login_required
 def newreview(request):
     form=ReviewForm
     if request.method=='POST':
@@ -48,3 +51,10 @@ def newreview(request):
     else:
           form=ReviewForm()
     return render(request, 'techapp/newreview.html', {'form': form})
+
+def loginmsg(request):
+      return render(request, 'techapp/loginmsg.html')
+
+def logoutmsg(request):
+      return render(request, 'techapp/logoutmsg.html')
+
