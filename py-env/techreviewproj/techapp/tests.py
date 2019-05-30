@@ -1,7 +1,9 @@
 from django.test import TestCase
 from django.urls import reverse, reverse_lazy
 from django.contrib.auth.models import User
+from django import forms
 from .models import Product, ProductType, Review
+
 
 
 # Create your tests here.
@@ -36,13 +38,29 @@ class IndexTest(TestCase):
         response=self.client.get(reverse('index'))
         self.assertEqual(response.status_code, 200)
 
-#not working :(
-# class GetProductsTest(TestCase):
-#     def setUp(self):
-#         self.u=User.objects.create(username='myuser')
-#         self.type=ProductType.objects.create(typename='laptop')
-#         self.prod = Product.objects.create(productname='product1', producttype=self.type, user=self.u, productprice=500.00, productentrydate='2019-04-02', productdescription="a product")
+class ProductFormTest(TestCase):
+    def setUp(self):
+        self.user=User.objects.create(username='user1', password='P@ssw0rd1')
 
-#     def test_product_detail_success(self):
-#         response = self.client.get(reverse('productdetails', args=(self.prod.id,)))
-#         self.assertEqual(response.status_code, 200)
+
+#without form here, tests don't work :(
+
+class ProductTypeForm(forms.ModelForm):
+    class Meta:
+        model=ProductType
+        fields='__all__'
+
+# tests for form
+
+class ProductType_Form_Test(TestCase):
+    def test_typeform_is_valid(self):
+        form=ProductTypeForm(data={'typename': "type1", 'typedescription' : "some type"})
+        self.assertTrue(form.is_valid())
+
+    def test_typeform_minus_descript(self):
+        form=ProductTypeForm(data={'typename': "type1"})
+        self.assertTrue(form.is_valid())
+
+    def test_typeform_empty(self):
+        form=ProductTypeForm(data={'typename': ""})
+        self.assertFalse(form.is_valid())

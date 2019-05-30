@@ -10,3 +10,8 @@ class ReviewForm(forms.ModelForm):
     class Meta:
         model=Review
         fields = '__all__'
+
+class ProductTypeForm(forms.ModelForm):
+    class Meta:
+        model=ProductType
+        fields='__all__'
