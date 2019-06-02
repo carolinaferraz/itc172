@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{{ mov.title }}</h2>
+
+<p>url: <a href="{{ mov.url }}">{{ mov.url }}</a></p>
+<p>date: {{ mov.date }}</p>
+<p>added by: {{ mov.user }}</p>
+<p>stars: {{ mov.rating }}</p>
+<p>description: {{ mov.description }}</p>
+
+<p>location: {{ mov.description }}</p>
+{% endblock  %}

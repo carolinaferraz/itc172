@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movies</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <script src="https://kit.fontawesome.com/68e0dc476f.js"></script>
+
+    <style>
+    li>a {
+        font-size: 1.55em;
+    }
+    </style>    
+       
+    </head>
+    <body>
+        <div class='jumbotron' style="background-color: #f0e3dc; color: lightblue;">
+            <h1>Movies</h1>
+        </div>
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                <div class="navbar-header">
+                <a class="navbar-brand" title="Home" href="{% url 'index' %}"><i class="fas fa-home"></i></a>
+                </div>
+                <ul class="nav navbar-nav">
+                <li><a title="Movie List" href="{% url 'movies' %}"><i class="fas fa-list"></i></a></li>
+
+                <li><a title="Theaters" href="{% url 'theaters' %}"><i class="fas fa-ticket-alt"></i> </a></li>
+                <li><a title="Add a Movie" href=""><i class="fas fa-plus"></i> <i class="fas fa-video"></i> </a></li>
+                <li><a title="Add a Theater" href=""><i class="fas fa-plus"></i> <i class="fas fa-ticket-alt"></i> </a></li>
+
+                <li><a title="Login" href=""><i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a title="Logout" href=""><i class="fas fa-sign-out-alt"></i> </a></li>
+                
+               
+                </ul>
+                </div>
+                </nav>
+        <p>&nbsp;</p>
+        <div class="container">
+        {% block content %}
+        {% endblock content %}
+        </div>
+    </body>
+</html>

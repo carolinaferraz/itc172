@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Theaters</h2>
+<table class="table">
+<tr>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Comment</th>
+    <th>URL</th>
+</tr>
+{% for t in theater_list %}
+<tr>
+    <td>{{ t.name }}</td>
+    <td>{{ t.address }}</td>
+    <td> {{ t.comment }}</td>
+    <td><a href="{{ t.url }}">{{ t.url }}</a></td>
+</tr>
+{% endfor %}
+
+</table>
+{% endblock %}
