@@ -16,7 +16,7 @@ def gettheaters(request):
 
 def getdetails(request, id):
     mov=get_object_or_404(Movie, pk=id)
-    movtheater=Theater.objects.filter(user_id=id)
+    movtheater=Theater.objects.filter(id=id)
     context={
         'mov': mov,
         'movtheater':movtheater,
