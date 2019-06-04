@@ -27,11 +27,11 @@
                 <li><a title="Movie List" href="{% url 'movies' %}"><i class="fas fa-list"></i></a></li>
 
                 <li><a title="Theaters" href="{% url 'theaters' %}"><i class="fas fa-ticket-alt"></i> </a></li>
-                <li><a title="Add a Movie" href=""><i class="fas fa-plus"></i> <i class="fas fa-video"></i> </a></li>
-                <li><a title="Add a Theater" href=""><i class="fas fa-plus"></i> <i class="fas fa-ticket-alt"></i> </a></li>
+                <li><a title="Add a Movie" href="{% url 'addmovie' %}"><i class="fas fa-plus"></i> <i class="fas fa-video"></i> </a></li>
+                <li><a title="Add a Theater" href="{% url 'addtheater' %}"><i class="fas fa-plus"></i> <i class="fas fa-ticket-alt"></i> </a></li>
 
-                <li><a title="Login" href=""><i class="fas fa-sign-in-alt"></i></a></li>
-                <li><a title="Logout" href=""><i class="fas fa-sign-out-alt"></i> </a></li>
+                <li><a title="Login" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a title="Logout" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> </a></li>
                 
                
                 </ul>

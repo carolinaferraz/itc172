@@ -5,7 +5,7 @@
 <tr>
     <th>Title</th>
     <th>Date</th>
-    <th>Description</th>
+    <th><i class="fas fa-star"></i> ( 1-5 )</th>
     <th>URL</th>
 </tr>
 
@@ -13,8 +13,8 @@
 <tr>
     <td><a href="{% url 'moviedetails' id=m.id %}">{{ m.title }}</td>
     <td>{{ m.date }}</td>
-    <td>{{ m.description }}</td>
-    <td><a href="{{ m.url }}">{{ m.url }}</a></td>
+    <td>{{ m.rating }}</td>
+    <td><a href="{{ m.url }}" title="{{ m.title }}">imdb</a></td>
 </tr>
 
 {% endfor %}
