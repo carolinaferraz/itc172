@@ -17,11 +17,9 @@ def getproducts(request):
 
 def productdetails(request, id):
     prod=get_object_or_404(Product, pk=id)
-    discount=prod.memberdiscount
-    reviews=Review.objects.filter(product=id).count()
+    reviews=Review.objects.filter(product=id)
     context={
         'prod' : prod,
-        'discount' : discount,
         'reviews' : reviews,
     }
     return render(request, 'techapp/productdetails.html', context=context)
