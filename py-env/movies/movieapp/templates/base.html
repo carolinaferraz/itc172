@@ -7,12 +7,6 @@
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <script src="https://kit.fontawesome.com/68e0dc476f.js"></script>
 
-    <style>
-    li>a {
-        font-size: 1.55em;
-    }
-    </style>    
-       
     </head>
     <body>
         <div class='jumbotron' style="background-color: #f0e3dc; color: lightblue;">
@@ -21,17 +15,17 @@
         <nav class="navbar navbar-default">
                 <div class="container-fluid">
                 <div class="navbar-header">
-                <a class="navbar-brand" title="Home" href="{% url 'index' %}"><i class="fas fa-home"></i></a>
+                <a class="navbar-brand" title="Home" href="{% url 'index' %}"><i class="fas fa-home"></i> &nbsp;Home</a>
                 </div>
                 <ul class="nav navbar-nav">
-                <li><a title="Movie List" href="{% url 'movies' %}"><i class="fas fa-list"></i></a></li>
+                <li><a title="Movie List" href="{% url 'movies' %}"><i class="fas fa-list"></i> &nbsp;Movies</a></li>
 
-                <li><a title="Theaters" href="{% url 'theaters' %}"><i class="fas fa-ticket-alt"></i> </a></li>
-                <li><a title="Add a Movie" href="{% url 'addmovie' %}"><i class="fas fa-plus"></i> <i class="fas fa-video"></i> </a></li>
-                <li><a title="Add a Theater" href="{% url 'addtheater' %}"><i class="fas fa-plus"></i> <i class="fas fa-ticket-alt"></i> </a></li>
+                <li><a title="Theaters" href="{% url 'theaters' %}"><i class="fas fa-ticket-alt"></i> &nbsp;Theaters</a></li>
+                <li><a title="Add Movies" href="{% url 'addmovie' %}"><i class="fas fa-plus"></i> <i class="fas fa-video"></i> &nbsp;Add Movies</a></li>
+                <li><a title="Add Theaters" href="{% url 'addtheater' %}"><i class="fas fa-plus"></i> <i class="fas fa-ticket-alt"></i> &nbsp;Add Theaters</a></li>
 
-                <li><a title="Login" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i></a></li>
-                <li><a title="Logout" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> </a></li>
+                <li><a title="Login" href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> &nbsp;Login</a></li>
+                <li><a title="Logout" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> &nbsp;Logout</a></li>
                 
                
                 </ul>
